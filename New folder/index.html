@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VJ Cloud Technologies | SAP Cloud & AI Consulting</title>
+<meta name="description" content="VJ Cloud Technologies provides expert SAP Cloud, SuccessFactors, integration and AI-enabled solutions for modern businesses. UK-based SAP consultants with 20+ years experience.">
+
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="icon" type="image/jpeg" href="logo.jpeg">
+
+<style>
+body{
+  font-family:'Roboto',sans-serif;
+  margin:0;
+  background:#f5f7fa;
+  color:#333;
+  scroll-behavior:smooth;
+}
+
+/* NAVIGATION */
+nav{
+  position:sticky;
+  top:0;
+  background:#1a73e8;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:10px 40px;
+  box-shadow:0 2px 8px rgba(0,0,0,0.1);
+  z-index:1000;
+}
+.logo-left{
+  height:50px;
+  border-radius:8px;
+}
+.nav-right a{
+  color:#fff;
+  text-decoration:none;
+  margin-left:25px;
+  font-weight:500;
+}
+.nav-right a:hover{color:#ffdd57;}
+.nav-cta{
+  background:#ffdd57;
+  color:#1a73e8 !important;
+  padding:8px 14px;
+  border-radius:20px;
+  font-weight:600;
+}
+
+/* HERO */
+header{
+  background:linear-gradient(135deg,#1a73e8,#0f4c81);
+  color:#fff;
+  text-align:center;
+  padding:80px 20px;
+  border-bottom-left-radius:25px;
+  border-bottom-right-radius:25px;
+}
+header h1{font-size:2.6em;margin:0;}
+header p{margin-top:12px;font-size:1.15em;max-width:700px;margin-left:auto;margin-right:auto;}
+.btn{
+  display:inline-block;
+  margin-top:25px;
+  padding:12px 26px;
+  background:#ffdd57;
+  color:#1a73e8;
+  border-radius:50px;
+  text-decoration:none;
+  font-weight:600;
+}
+.btn:hover{background:#ffe680;}
+
+/* LAYOUT */
+.container{
+  max-width:900px;
+  margin:70px auto;
+  padding:0 20px;
+}
+h2{
+  color:#1a73e8;
+  text-align:center;
+  margin-bottom:25px;
+}
+p{text-align:center;line-height:1.7;}
+
+.card{
+  background:#fff;
+  border-radius:12px;
+  padding:22px;
+  margin:18px 0;
+  box-shadow:0 4px 12px rgba(0,0,0,0.06);
+  transition:transform .3s;
+}
+.card:hover{transform:translateY(-5px);}
+
+/* TRUST STRIP */
+.trust{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:15px;
+  font-weight:500;
+}
+
+/* FOOTER */
+footer{
+  background:#1a73e8;
+  color:#fff;
+  text-align:center;
+  padding:18px;
+  border-top-left-radius:25px;
+  border-top-right-radius:25px;
+  font-size:.9em;
+}
+
+/* CHAT */
+.vj-chat-btn{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  background:#1a73e8;
+  color:#fff;
+  border-radius:50px;
+  padding:14px 18px;
+  border:none;
+  font-weight:600;
+  cursor:pointer;
+  z-index:10000;
+}
+.vj-chat-window{
+  position:fixed;
+  right:20px;
+  bottom:80px;
+  width:360px;
+  height:520px;
+  background:#fff;
+  box-shadow:0 5px 25px rgba(0,0,0,.25);
+  border-radius:14px;
+  display:none;
+  flex-direction:column;
+  z-index:9999;
+}
+.vj-chat-header{
+  background:#1a73e8;
+  color:#fff;
+  padding:12px;
+  font-weight:500;
+  display:flex;
+  justify-content:space-between;
+}
+.vj-chat-body{
+  flex:1;
+  padding:10px;
+  background:#e8f0fe;
+  overflow:auto;
+  display:flex;
+  flex-direction:column;
+}
+.vj-msg{
+  max-width:80%;
+  margin:5px 0;
+  padding:10px;
+  border-radius:10px;
+}
+.vj-msg.user{
+  align-self:flex-end;
+  background:#fff;
+}
+.vj-msg.bot{
+  align-self:flex-start;
+  background:#fff;
+  border:1px solid rgba(0,0,0,.15);
+}
+.vj-input-container{
+  display:flex;
+  gap:6px;
+  padding:8px;
+}
+.vj-input{
+  flex:1;
+  padding:10px;
+  border-radius:50px;
+  border:1px solid #ccc;
+}
+.vj-send{
+  background:#1a73e8;
+  color:#fff;
+  border:none;
+  padding:10px 16px;
+  border-radius:50px;
+  cursor:pointer;
+}
+.vj-btn-option{
+  margin:4px 0;
+  padding:10px;
+  border-radius:8px;
+  border:1px solid #1a73e8;
+  background:#fff;
+  color:#1a73e8;
+  font-weight:500;
+  cursor:pointer;
+}
+.vj-btn-option:hover{
+  background:#1a73e8;
+  color:#fff;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <img src="logo.jpeg" class="logo-left">
+  <div class="nav-right">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact" class="nav-cta">Book Call</a>
+  </div>
+</nav>
+
+<header id="home">
+  <h1>Helping Businesses Transform with SAP Cloud & AI</h1>
+  <p>
+    Expert SAP Cloud, SuccessFactors, integration and AI-enabled solutions
+    designed to improve efficiency, scalability and long-term business growth.
+  </p>
+  <a href="#contact" class="btn">Book Free Strategy Call</a>
+</header>
+
+<div class="container">
+  <div class="card trust">
+    <span>✔ 20+ Years SAP Experience</span>
+    <span>✔ SAP Cloud & SuccessFactors</span>
+    <span>✔ AI-Enabled Automation</span>
+    <span>✔ UK-Based Consulting</span>
+  </div>
+</div>
+
+<div class="container" id="about">
+  <h2>About VJ Cloud Technologies</h2>
+  <p>
+    VJ Cloud Technologies is a UK-based SAP consulting firm with over
+    <strong>20 years of hands-on SAP experience</strong>.
+    We help organisations design, migrate, integrate and optimise SAP Cloud
+    and SuccessFactors solutions that are secure, scalable and future-ready.
+  </p>
+</div>
+
+<div class="container" id="services">
+  <h2>Our Services</h2>
+
+  <div class="card">
+    <h3>💻 SAP Cloud Implementation</h3>
+    <p>End-to-end SAP Cloud implementation built for performance and reliability.</p>
+  </div>
+
+  <div class="card">
+    <h3>☁️ Cloud Migration</h3>
+    <p>Seamless migration from on-premise or legacy SAP systems to the cloud.</p>
+  </div>
+
+  <div class="card">
+    <h3>🔗 Integration & Automation</h3>
+    <p>Connecting SAP with third-party platforms using secure, scalable integration.</p>
+  </div>
+
+  <div class="card">
+    <h3>⚡ Optimization & Support</h3>
+    <p>Performance tuning, cost optimisation and ongoing SAP cloud support.</p>
+  </div>
+
+  <div class="card">
+    <h3>📚 SAP & SuccessFactors Training</h3>
+    <p>Practical, expert-led training to enable teams and ensure adoption.</p>
+  </div>
+</div>
+
+<div class="container">
+  <h2>How We Work</h2>
+
+  <div class="card"><strong>1️⃣ Discover & Plan</strong><br>We analyse your business goals and SAP landscape.</div>
+  <div class="card"><strong>2️⃣ Implement & Integrate</strong><br>We deploy and integrate solutions with minimal disruption.</div>
+  <div class="card"><strong>3️⃣ Optimize & Support</strong><br>We fine-tune, automate and support long-term success.</div>
+</div>
+
+<div class="container" id="contact">
+  <h2>Contact Us</h2>
+  <p>
+    Planning an SAP Cloud migration, optimisation or AI integration?
+    Book a free consultation to discuss your requirements.
+  </p>
+  <p>📧 vjcloudtech@vjct.co.uk</p>
+  <p>📞 +44 7563 716225</p>
+  <p>📍 London, United Kingdom</p>
+</div>
+
+<footer>
+  © 2025 VJ Cloud Technologies Ltd. All Rights Reserved.
+</footer>
+
+<!-- CHAT -->
+<button class="vj-chat-btn" id="vjToggle">Ask VJ AI</button>
+<div class="vj-chat-window" id="vjWindow">
+  <div class="vj-chat-header">
+    VJ AI Assistant
+    <button onclick="vjWindow.style.display='none'">✕</button>
+  </div>
+  <div class="vj-chat-body" id="vjBody"></div>
+  <div class="vj-input-container">
+    <input class="vj-input" id="vjInput" placeholder="Type here...">
+    <button class="vj-send" id="vjSend">Send</button>
+  </div>
+</div>
+<script>
+const vjWindow = document.getElementById("vjWindow");
+const vjBody   = document.getElementById("vjBody");
+const vjInput  = document.getElementById("vjInput");
+const vjSend   = document.getElementById("vjSend");
+const vjToggle = document.getElementById("vjToggle");
+
+vjToggle.onclick = () => {
+  vjWindow.style.display = "flex";
+  if (!vjBody.hasChildNodes()) {
+    addMsg("Hello 👋 I’m VJ AI, your SAP Cloud & SuccessFactors assistant.", "bot");
+  }
+};
+
+function addMsg(text, role){
+  const div = document.createElement("div");
+  div.className = "vj-msg " + role;
+  div.textContent = text;
+  vjBody.appendChild(div);
+  vjBody.scrollTop = vjBody.scrollHeight;
+}
+
+async function sendMsg(){
+  const msg = vjInput.value.trim();
+  if(!msg) return;
+
+  addMsg(msg,"user");
+  vjInput.value="";
+  addMsg("Thinking...","bot");
+
+  try{
+    const res = await fetch("https://YOUR-PROJECT.vercel.app/api/chat",{
+      method:"POST",
+      headers:{ "Content-Type":"application/json" },
+      body: JSON.stringify({ message: msg })
+    });
+
+    const data = await res.json();
+    vjBody.lastChild.remove();
+    addMsg(data.reply,"bot");
+
+  }catch(err){
+    vjBody.lastChild.remove();
+    addMsg("Please contact vjcloudtech@vjct.co.uk","bot");
+  }
+}
+
+vjSend.onclick = sendMsg;
+vjInput.addEventListener("keypress", e => {
+  if(e.key === "Enter") sendMsg();
+});
+</script>
+</body>
+</html>
